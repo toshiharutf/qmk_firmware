@@ -42,13 +42,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [L_1] = LAYOUT_split_3x6_3(
     //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        KC_CAPS, ES_EXLM, ES_DQUO, ES_HASH, ES_CIRC, XXXXXXX,                      ES_ASTR,    ES_7,    ES_8,    ES_9, ES_MINS, KC_BSPC,
+        KC_CAPS, ES_EXLM, ES_DQUO, ES_HASH, ES_CIRC, XXXXXXX,                      ES_PLUS,    ES_MINS,    ES_7,    ES_8, ES_9, KC_BSPC,
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LCTL, ES_LCBR, ES_RCBR, ES_LPRN, ES_RPRN, ES_QUES,                      ES_SLSH,    ES_4,    ES_5,    ES_6, ES_PLUS, ES_QUOT,
+        KC_LCTL, ES_LCBR, ES_RCBR, ES_LPRN, ES_RPRN, ES_QUES,                      ES_SLSH,    ES_FORD,    ES_4,    ES_5, ES_6, ES_QUOT,
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LSFT, ES_LBRC, ES_RBRC, ES_LABK, ES_RABK,  ES_EQL,                         ES_0,    ES_1,    ES_2,    ES_3,  ES_DOT, KC_RSFT,
+        KC_LSFT, ES_LBRC, ES_RBRC, ES_LABK, ES_RABK,  ES_EQL,                      ES_COMM,    ES_DOT,    ES_1,    ES_2,  ES_3, KC_RSFT,
     //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_LALT
+                                            KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, ES_0
                                         //`--------------------------'  `--------------------------'
     ),
 
@@ -101,10 +101,10 @@ void oled_render_layer_state(void) {
             oled_write_ln_P(PSTR("Layer 1"), false);
             break;
         case L_2:
-            oled_write_ln_P(PSTR("Right"), false);
+            oled_write_ln_P(PSTR("Layer 2"), false);
             break;
         case L_3:
-            oled_write_ln_P(PSTR("Upper Right"), false);
+            oled_write_ln_P(PSTR("Fuck you Tom!"), false);
             break;
         default:
             oled_write_ln_P(PSTR("Undefined"), false);
