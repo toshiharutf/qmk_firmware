@@ -11,3 +11,5 @@ Some ideas that shaped this layout:
 * The right half of the keyboard can be used as a numpad with only the right hand by selecting the Right layer (`▷`).
 * The only keys missing from a full-size (105 keys) Spanish keyboard are the interpunct (`·` or `Shift` + `3`), `Scroll Lock`, and `Num Lock`. I never use them (does anybody?) and I'd rather not include them and risk toggling Scroll/Num Lock by accident.
 * Media keys are not present because I find it better to use keyboard + mouse shortcuts with [AutoHotkey](https://www.autohotkey.com/) (e.g: `Ctrl` + `Shift` + `Wheel Up`/`Wheel Down` increases/decreases the volume).
+
+* Flashing: qmk flash -kb crkbd/rev1 -km rttf

@@ -18,68 +18,69 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
-#include "keymap_spanish.h"
+#include "keymap_latin_spanish.h"
+#include "logo.h"
 
 enum layers {
     L_0,
     L_1,
     L_2,
-    L_3,
+    SETUP,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [L_0] = LAYOUT_split_3x6_3(
     //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-         KC_TAB,    ES_Q,    ES_W,    ES_E,    ES_R,    ES_T,                         ES_Y,    ES_U,    ES_I,    ES_O,   ES_P,  KC_BSPC,
+         KC_ESC,    ES_Q,    ES_W,    ES_E,    ES_R,    ES_T,                         ES_Y,    ES_U,    ES_I,    ES_O,   ES_P,  KC_BSPC,
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LCTL,    ES_A,    ES_S,    ES_D,    ES_F,    ES_G,                         ES_H,    ES_J,    ES_K,    ES_L, ES_NTIL, ES_ACUT,
-    //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LSFT,    ES_Z,    ES_X,    ES_C,    ES_V,    ES_B,                         ES_N,    ES_M, ES_COMM,  ES_DOT, ES_MINS, KC_RSFT,
+         KC_TAB,    ES_A,    ES_S,    ES_D,    ES_F,    ES_G,                         ES_H,    ES_J,    ES_K,    ES_L, ES_NTIL, KC_DEL,
+    //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+---:-----+--------|
+        KC_LCTL,    ES_Z,    ES_X,    ES_C,    ES_V,    ES_B,                         ES_N,    ES_M, ES_COMM,  ES_DOT, ES_DQUO, KC_RCTL,
     //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_LGUI,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_LALT
+                                                KC_LSFT,   MO(1),  KC_SPC,     KC_ENT,   MO(2), KC_RSFT
                                         //`--------------------------'  `--------------------------'
     ),
 
     [L_1] = LAYOUT_split_3x6_3(
     //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        KC_CAPS, ES_EXLM, ES_DQUO, ES_HASH, ES_CIRC, XXXXXXX,                      ES_PLUS,    ES_MINS,    ES_7,    ES_8, ES_9, KC_BSPC,
-    //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LCTL, ES_LCBR, ES_RCBR, ES_LPRN, ES_RPRN, ES_QUES,                      ES_SLSH,    ES_FORD,    ES_4,    ES_5, ES_6, ES_QUOT,
-    //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LSFT, ES_LBRC, ES_RBRC, ES_LABK, ES_RABK,  ES_EQL,                      ES_COMM,    ES_DOT,    ES_1,    ES_2,  ES_3, KC_RSFT,
+        KC_TRNS, XXXXXXX, XXXXXXX, ES_FORD, ES_SLSH,  XXXXXXX,                      ES_EQL,    ES_7,    ES_8, ES_9,   XXXXXXX, KC_TRNS,
+    //|--------+--------+--------+--------+--------+--------+--|                    |--------+------+--------+-----+-  -------+--------|
+        KC_CAPS, XXXXXXX, XXXXXXX, ES_MINS, ES_PLUS,  XXXXXXX,                      ES_0,       ES_4,    ES_5, ES_6,   XXXXXXX, KC_TRNS,
+    //|--------+--------+--------+--------+--------+--------+--|                    |--------+------+--------+-----+-  -------+--------|
+        KC_TRNS, XXXXXXX, XXXXXXX, ES_RABK, ES_LABK,  XXXXXXX,                      XXXXXXX,    ES_1,    ES_2, ES_3,   XXXXXXX, KC_TRNS,
     //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, ES_0
+                                            KC_LSFT, _______,  KC_SPC,     KC_ENT, _______, ES_DOT
                                         //`--------------------------'  `--------------------------'
     ),
 
     [L_2] = LAYOUT_split_3x6_3(
     //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-         KC_ESC,   KC_F1,   KC_F2,   KC_F3,   KC_F4,  KC_APP,                       KC_INS, KC_HOME,   KC_UP,  KC_END, KC_PGUP, KC_BSPC,
+        KC_TRNS, ES_CIRC, ES_PIPE, ES_LBRC,  ES_RBRC, ES_HASH,                    KC_BSPC,  KC_PGUP, XXXXXXX, KC_PGDN, ES_TILD, XXXXXXX,
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LCTL,   KC_F5,   KC_F6,   KC_F7,   KC_F8, KC_PSCR,                       KC_DEL, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, ES_DIAE,
+        KC_TRNS, ES_AT,   ES_AMPR, ES_LPRN,  ES_RPRN, ES_UNDS,                  XXXXXXX, KC_HOME, KC_UP, KC_END, XXXXXXX, XXXXXXX,
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LSFT,   KC_F9,  KC_F10,  KC_F11,  KC_F12, KC_PAUS,                      XXXXXXX, XXXXXXX, ES_SCLN, ES_COLN, ES_UNDS, KC_RSFT,
+        KC_TRNS, ES_PERC, ES_EXLM, ES_LCBR,  ES_RCBR, ES_MINS,                   KC_DEL, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
     //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_LALT
+                                            KC_LSFT, _______,  KC_SPC,     KC_ENT, _______, _______
                                         //`--------------------------'  `--------------------------'
     ),
 
 
-    [L_3] = LAYOUT_split_3x6_3(
+    [SETUP] = LAYOUT_split_3x6_3(
     //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        XXXXXXX, ES_IEXL,   ES_AT, ES_EURO,  ES_DLR, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, ES_MORD, XXXXXXX, KC_BSPC,
+        XXXXXXX, XXXXXXX, XXXXXXX, QK_REBOOT, QK_MAKE, QK_BOOTLOADER,              RGB_M_P, RGB_M_B, RGB_M_R, RGB_M_SW, RGB_M_SN, RGB_TOG,
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LCTL, ES_FORD, ES_AMPR, ES_PIPE, ES_BSLS, ES_IQUE,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, ES_TILD,  ES_GRV,
+        XXXXXXX, XXXXXXX, XXXXXXX, LALT(KC_PSCR), KC_PSCR, XXXXXXX,                RGB_M_K, RGB_VAI, RGB_SAI, RGB_HUI, RGB_SAI,  RGB_M_G,
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_LSFT, XXXXXXX,  ES_NOT, ES_CCED, ES_PERC, XXXXXXX,                      RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_RSFT,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                     RGB_M_X, RGB_VAD, RGB_SAD, RGB_HUD, RGB_SAD, KC_RSFT,
     //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_LALT
+                                            KC_LSFT, _______,  KC_SPC,     KC_ENT, _______, _______
                                         //`--------------------------'  `--------------------------'
     )
 };
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    return update_tri_layer_state(state, L_1, L_2, L_3);
+    return update_tri_layer_state(state, L_1, L_2, SETUP);
 }
 
 #ifdef OLED_ENABLE
@@ -103,7 +104,7 @@ void oled_render_layer_state(void) {
         case L_2:
             oled_write_ln_P(PSTR("Layer 2"), false);
             break;
-        case L_3:
+        case SETUP:
             oled_write_ln_P(PSTR("Fuck you Tom!"), false);
             break;
         default:

@@ -3,3 +3,4 @@ RGBLIGHT_ENABLE = yes
 OLED_ENABLE     = yes
 LTO_ENABLE      = yes
 BOOTLOADER = atmel-dfu
+ENABLE_COMPILE_KEYCODE = yes
