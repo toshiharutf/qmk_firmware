@@ -45,11 +45,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         KC_TRNS, XXXXXXX, XXXXXXX, ES_ASTR, ES_SLSH,  XXXXXXX,                      ES_EQL,    ES_7,    ES_8, ES_9,   XXXXXXX, XXXXXXX,
     //|--------+--------+--------+--------+--------+--------+--|                    |--------+------+--------+-----+-  -------+--------|
-        KC_CAPS, XXXXXXX, XXXXXXX, ES_MINS, ES_PLUS,  XXXXXXX,                      ES_0,       ES_4,    ES_5, ES_6,   XXXXXXX, XXXXXXX,
+        KC_CAPS, XXXXXXX, XXXXXXX, ES_MINS, ES_PLUS,  XXXXXXX,                      ES_DOT,   ES_4,    ES_5, ES_6,   XXXXXXX, XXXXXXX,
     //|--------+--------+--------+--------+--------+--------+--|                    |--------+------+--------+-----+-  -------+--------|
-        KC_LCTL, XXXXXXX, XXXXXXX, ES_LABK, ES_RABK,  XXXXXXX,                      XXXXXXX,    ES_1,    ES_2, ES_3,   XXXXXXX, KC_RCTL,
+        KC_LCTL, XXXXXXX, XXXXXXX, ES_LABK, ES_RABK,  XXXXXXX,                      ES_0,    ES_1,    ES_2, ES_3,   XXXXXXX, KC_RCTL,
     //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                            KC_LSFT, _______,  KC_SPC,     KC_ENT, _______, ES_DOT
+                                            KC_LSFT, _______,  KC_SPC,     KC_ENT, _______, XXXXXXX
                                         //`--------------------------'  `--------------------------'
     ),
 
