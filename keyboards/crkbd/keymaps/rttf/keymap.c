@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+---:-----+--------|
         KC_LGUI,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_UNDS, KC_RALT,
     //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-        MO(2), KC_LCTL,  KC_SPC ,    KC_ENT,  KC_RSFT ,   MO(1)
+        MO(2), KC_LCTL,  KC_SPC ,    KC_ENT,  KC_RSFT ,  ; MO(1)
                                         //`--------------------------'  `--------------------------'
     ),
 
@@ -57,11 +57,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         _______, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX,                    XXXXXXX,  KC_AT, KC_HASH, KC_DLR, KC_TILD, KC_BSPC,
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        _______, KC_HOME,  KC_UP,  KC_END,  KC_PGUP,  XXXXXXX,                    XXXXXXX, KC_QUES, KC_EXLM, KC_PERC, XXXXXXX, KC_DEL,
+        _______, KC_HOME,  KC_UP,  KC_END,  KC_PGUP,  XXXXXXX,                    XXXXXXX, KC_COLN, KC_SEMICOLON, KC_EXLM, XXXXXXX, KC_DEL,
     //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        _______, KC_LEFT, KC_DOWN, KC_RIGHT,  KC_PGDN, XXXXXXX,                    XXXXXXX, KC_AMPR, KC_PIPE, XXXXXXX, XXXXXXX, XXXXXXX,
+        _______, KC_LEFT, KC_DOWN, KC_RIGHT,  KC_PGDN, XXXXXXX,                    XXXXXXX, KC_QUES, KC_AMPR, KC_PIPE, KC_PERC, XXXXXXX,
     //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-        _______   ,_______, _______  ,     _______ , KC_SPC, _______
+        _______   ,_______, _______  ,     _______ , _______, _______
                                         //`--------------------------'  `--------------------------'
     ),
 
